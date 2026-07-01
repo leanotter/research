@@ -212,6 +212,27 @@ const { Content } = await render(doc.entry);
           }
         };
 
+        const formatTranscriptLine = (element, content) => {
+          element.classList.add("transcript-line");
+          element.textContent = "";
+
+          const speakerMatch = content.match(/^(Me|Them):(.*)$/s);
+          if (!speakerMatch) {
+            element.textContent = content;
+            return;
+          }
+
+          const [, speaker, remainder] = speakerMatch;
+          const label = document.createElement("strong");
+          label.className = "transcript-speaker";
+          label.textContent = `${speaker}:`;
+          element.appendChild(label);
+
+          if (remainder) {
+            element.appendChild(document.createTextNode(remainder));
+          }
+        };
+
         const normalizeTranscriptFormatting = () => {
           const transcriptBlocks = Array.from(
             transcriptView.querySelectorAll("p, li"),
@@ -229,7 +250,7 @@ const { Content } = await render(doc.entry);
 
             const matches = Array.from(content.matchAll(/(?:^|\s)(Me|Them):/g));
             if (matches.length <= 1) {
-              block.classList.add("transcript-line");
+              formatTranscriptLine(block, content);
               continue;
             }
 
@@ -246,8 +267,7 @@ const { Content } = await render(doc.entry);
             const fragment = document.createDocumentFragment();
             for (const part of parts) {
               const paragraph = document.createElement("p");
-              paragraph.className = "transcript-line";
-              paragraph.textContent = part;
+              formatTranscriptLine(paragraph, part);
               fragment.appendChild(paragraph);
             }
 
