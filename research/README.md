@@ -4,7 +4,6 @@ This repository is organised by flow first, then by content type.
 
 ## Flows
 
-- `oxford-growth`
 - `private-equity`
 
 ## Content Types

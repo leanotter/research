@@ -1,14 +1,12 @@
 # Research Repository Guide
 
-This repository is organised as a research repository across multiple flows.
+This repository is organised as a research repository, currently focused on the Private Equity flow.
 
 ## Top-Level Structure
 
 All work should live under `research/` and then be grouped by flow first:
 
-- `research/oxford-growth/`
 - `research/private-equity/`
-- `research/client-work/`
 
 Within each flow, organise content by type:
 
@@ -20,15 +18,7 @@ Example structure:
 
 ```text
 research/
-  oxford-growth/
-    interviews/
-    notes/
-    synthesis/
   private-equity/
-    interviews/
-    notes/
-    synthesis/
-  client-work/
     interviews/
     notes/
     synthesis/
@@ -69,89 +59,13 @@ Different flows may require different summary structures. Use the structure defi
 - Avoid overly casual language in the summary, even if the transcript is informal.
 - Preserve the transcript as-is as much as possible when included in the `Full Transcript` section.
 
-## Oxford Growth Interview Structure
-
-For Oxford Growth interviews, the reference example is:
-
-- `research/oxford-growth/interviews/will-arinze.md`
-
-Every Oxford Growth interview file should follow this structure in this order:
-
-```md
-# First Last
-
-## Meeting Details
-
-- **Date:** Mon DD
-- **Participants:** Name, Name, Name
-- **Meeting title:** Exact meeting title
-
-## Overview
-
-Short 1-2 paragraph summary of the conversation, the interviewee's context, and the main themes that emerged.
-
-## Why [First Name] Networks
-
-- Bullet points summarising why they network, what they seek, and how that has evolved.
-
-## Key Insights For [Flow]
-
-### 1. Insight title
-
-Short paragraph.
-
-### 2. Insight title
-
-Short paragraph.
-
-## Observations On Existing Networks
-
-### Group name
-
-- Relevant bullets.
-
-## Format And Commercial Model Considerations
-
-Short intro sentence if needed.
-
-- Bullet points.
-
-## Signals Of Value
-
-Short intro sentence if needed.
-
-- Bullet points.
-
-## Potential Risks Or Things To Avoid
-
-- Bullet points.
-
-## Suggested People To Speak To
-
-- **Name**: brief reason.
-
-## Notable Quotes / Themes
-
-- Theme or paraphrased quote.
-
-## Takeaways For Us
-
-- Bullet points focused on implications for the relevant flow.
-
-## Full Transcript
-
-Meeting Title: ...
-Date: ...
-Meeting participants: ...
-
-Transcript:
-
-Raw transcript pasted here.
-```
-
 ## Private Equity Interview Structure
 
-Private Equity interviews should use a different structure from Oxford Growth. These calls are typically more useful when they surface buyer behaviour, diligence priorities, positioning implications, and routes to market rather than community preferences.
+For Private Equity interviews, the reference example is:
+
+- `research/private-equity/interviews/amir-qureshi.md`
+
+These calls are typically most useful when they surface buyer behaviour, diligence priorities, positioning implications, and routes to market.
 
 Every Private Equity interview file should follow this structure in this order:
 
@@ -257,85 +171,6 @@ Transcript:
 Raw transcript pasted here.
 ```
 
-## Client Work Interview Structure
-
-Client Work interviews should use a delivery and decision-oriented structure. These calls are usually most useful when they clarify the client's context, the problem to solve, success criteria, stakeholder dynamics, constraints, and the implications for how work should be shaped.
-
-Every Client Work interview file should follow this structure in this order:
-
-```md
-# First Last
-
-## Meeting Details
-
-- **Date:** Mon DD
-- **Participants:** Name, Name
-- **Meeting title:** Exact meeting title
-
-## Snapshot
-
-Short 1-2 paragraph summary of the client context, the problem or opportunity discussed, and the main implications for the work.
-
-## Client Context
-
-- Who the client is and what they do.
-- Relevant business, team, product, or market context.
-- Why this conversation matters.
-
-## Problem / Opportunity
-
-- The core problem, challenge, or opportunity discussed.
-- What seems urgent, important, or strategically significant.
-- Any underlying causes that emerged.
-
-## Current State
-
-- How things work today.
-- Existing processes, products, teams, or delivery approach.
-- What appears to be working and not working.
-
-## Goals And Success Criteria
-
-- Desired outcomes.
-- What success looks like.
-- Any explicit measures, timelines, or commercial goals mentioned.
-
-## Stakeholders And Decision-Making
-
-- Key people or groups involved.
-- Who influences the work.
-- Who owns the decision.
-- Any organisational dynamics worth noting.
-
-## Constraints / Risks
-
-- Time, budget, technical, regulatory, organisational, or delivery constraints.
-- Risks, blockers, or dependencies.
-- Things that could slow or derail progress.
-
-## Recommendations / Implications
-
-- What the conversation suggests we should do, test, clarify, or avoid.
-- Implications for scope, delivery, discovery, or positioning.
-
-## Suggested Next Steps
-
-- Clear immediate follow-ups.
-- Information to gather.
-- People to speak to.
-- Decisions to make.
-
-## Full Transcript
-
-Meeting Title: ...
-Date: ...
-Meeting participants: ...
-
-Transcript:
-
-Raw transcript pasted here.
-```
-
 ## Section Guidance
 
 ### `# First Last`
@@ -347,59 +182,8 @@ Raw transcript pasted here.
 - Keep this short and factual.
 - Use bullets exactly as shown in the example.
 
-### `## Overview`
-
-- Write 1-2 concise paragraphs.
-- Explain who the person is in context if it is relevant.
-- Summarise the biggest themes from the conversation.
-
-### `## Why [First Name] Networks`
-
-- Tailor this heading to the interviewee's first name.
-- Use bullets to capture motivation, goals, and evolution over time.
-
-### `## Key Insights For [Flow]`
-
-- Tailor the section title to the relevant flow, for example `Oxford Growth`, `Private Equity`, or `Client Work`.
-- Use numbered `###` subheadings.
-- Each insight should be distinct and useful for future synthesis.
-- Keep each explanation short, usually 2-4 sentences.
-
-### `## Observations On Existing Networks`
-
-- Capture comments about communities, accelerators, groups, or events already in the market.
-- Use `###` subheadings for each network when there is enough detail.
-
-### `## Format And Commercial Model Considerations`
-
-- Include any comments about cadence, event style, pricing, exclusivity, membership, digital vs in-person, or accessibility.
-
-### `## Signals Of Value`
-
-- Capture what the interviewee appears to value most in a network or community.
-
-### `## Potential Risks Or Things To Avoid`
-
-- Include concerns, anti-patterns, and failure modes mentioned or implied in the conversation.
-
-### `## Suggested People To Speak To`
-
-- List referrals, adjacent contacts, or names the interviewee recommends.
-- Include a short explanation for why they are relevant.
-
-### `## Notable Quotes / Themes`
-
-- Prefer short paraphrased themes over long direct quotes.
-- Use this section to capture memorable ideas that may recur across interviews.
-
-### `## Takeaways For Us`
-
-- Keep this focused on what the relevant flow should learn, test, preserve, or avoid.
-- This should be actionable.
-
 ### `## Snapshot`
 
-- Use this section for Private Equity interviews instead of `## Overview` when following the PE template.
 - Summarise who the person is, where they sit in the deal ecosystem, and the main commercial implications of the call.
 
 ### `## Who They Are / Relevant Context`
@@ -445,45 +229,15 @@ Raw transcript pasted here.
 
 - Capture market-entry risks, positioning risks, credibility issues, and other traps.
 
-### `## Client Context`
+### `## Suggested People To Speak To`
 
-- Use this section for Client Work interviews to orient future readers quickly.
-- Capture the client background, relevant operating context, and why the conversation matters.
+- List referrals, adjacent contacts, or names the interviewee recommends.
+- Include a short explanation for why they are relevant.
 
-### `## Problem / Opportunity`
+### `## Takeaways For Us`
 
-- Focus on the practical problem to solve or opportunity to pursue.
-- Capture both the stated issue and any implied underlying issues.
-
-### `## Current State`
-
-- Describe how things currently work and where friction appears to sit.
-- Include relevant detail on teams, tools, processes, products, or workflows.
-
-### `## Goals And Success Criteria`
-
-- Note what the client wants to achieve and how success is likely to be judged.
-- Include explicit or implied commercial, operational, or delivery outcomes.
-
-### `## Stakeholders And Decision-Making`
-
-- Record who matters to delivery and approval.
-- Note decision-makers, influencers, and any relevant internal dynamics.
-
-### `## Constraints / Risks`
-
-- Capture practical boundaries such as timeline, budget, regulation, capacity, or technical limitations.
-- Include dependencies and failure modes that could affect the work.
-
-### `## Recommendations / Implications`
-
-- Translate the conversation into practical implications for the work.
-- Focus on scope, delivery, discovery, positioning, and risk management.
-
-### `## Suggested Next Steps`
-
-- Keep this concrete and action-oriented.
-- Use it for follow-ups, open questions, and immediate next moves.
+- Keep this focused on what we should learn, test, preserve, or avoid.
+- This should be actionable.
 
 ### `## Full Transcript`
 

@@ -1,6 +1,6 @@
 # Private Research Site
 
-This Astro site currently surfaces interview research for `oxford-growth` and `private-equity`.
+This Astro site surfaces private equity research interviews.
 
 ## Local setup
 

@@ -2,14 +2,9 @@ import type { CollectionEntry } from "astro:content";
 
 export const FLOWS = [
   {
-    slug: "oxford-growth",
-    title: "Oxford Growth",
-    description: "Founder, network, and growth-oriented research interviews.",
-  },
-  {
     slug: "private-equity",
     title: "Private Equity",
-    description: "Buy-side, diligence, and PE-adjacent research interviews.",
+    description: "Buy-side, sell-side, diligence, and PE-adjacent research interviews.",
   },
 ] as const;
 
@@ -100,24 +95,11 @@ const INTERVIEW_METADATA: Partial<
     }
   >
 > = {
-  "oxford-growth/interviews/alexandra-rae": {
-    jobTitle: "CEO",
-    company: "Wise Investment",
-  },
-  "oxford-growth/interviews/mike-pytharidis": {
-    jobTitle: "Commercial and operational leader",
-    company: "Litta",
-  },
-  "oxford-growth/interviews/will-arinze": {
-    jobTitle: "Founder",
-    company: "The Drone Rules (TDR)",
-  },
-  "oxford-growth/interviews/poppy-roworth": {
-    jobTitle: "Former COO",
-    company: "Arctoris",
-  },
   "private-equity/interviews/amir-qureshi": {
     jobTitle: "Independent PE and M&A adviser",
+  },
+  "private-equity/interviews/guy-ballantine": {
+    jobTitle: "CEO Adviser │ Non-exec",
   },
   "private-equity/interviews/sabby-gill": {
     jobTitle: "CEO",
