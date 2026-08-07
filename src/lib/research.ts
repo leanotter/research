@@ -98,6 +98,10 @@ const INTERVIEW_METADATA: Partial<
   "private-equity/interviews/amir-qureshi": {
     jobTitle: "Independent PE and M&A adviser",
   },
+  "private-equity/interviews/dean-ziadar": {
+    jobTitle: "Partner",
+    company: "LCV Partners",
+  },
   "private-equity/interviews/guy-ballantine": {
     jobTitle: "CEO Adviser │ Non-exec",
   },
