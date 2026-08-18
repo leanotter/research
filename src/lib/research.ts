@@ -109,6 +109,14 @@ const INTERVIEW_METADATA: Partial<
     jobTitle: "CEO",
     company: "Dext",
   },
+  "private-equity/interviews/matthew-hewlett": {
+    jobTitle: "Head of Strategy & Corporate Development",
+    company: "IRIS Software Group",
+  },
+  "private-equity/interviews/fergus-brownlee": {
+    jobTitle: "Chairman",
+    company: "Thomas International",
+  },
 };
 
 function getFlowMeta(slug: string) {
