@@ -117,6 +117,10 @@ const INTERVIEW_METADATA: Partial<
     jobTitle: "Chairman",
     company: "Thomas International",
   },
+  "private-equity/interviews/alistair-cox": {
+    jobTitle: "Former Chief Executive │ NED",
+    company: "Hays plc",
+  },
 };
 
 function getFlowMeta(slug: string) {
