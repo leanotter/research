@@ -122,6 +122,7 @@ const INTERVIEW_METADATA: Partial<
     company: "Hays plc",
   },
   "private-equity/interviews/joe-sanchez": {
+    jobTitle: "CEO",
     company: "Webexpenses",
   },
 };

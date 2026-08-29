@@ -8,90 +8,64 @@
 
 ## Snapshot
 
-This wasn't a research call in the usual sense — it's a personal catch-up between Joe Sanchez and Gareth Jones, former colleagues from Thomas International, that happened to surface a lot of directly relevant material. Gareth has spent the last year building WorkTech, an independent advisory practice in work tech (HR tech, ERP, expenses, B2B SaaS), split between an investor/corp-dev service line (market intelligence, acquisition shortlisting, due diligence, post-deal integration) and a scale-up service line (capital deployment strategy, AI readiness, exit prep). His core thesis, arrived at independently, is the same one this research keeps hearing: most M&A deals fail on due diligence quality that never goes beyond the tech stack, and on post-integration execution — and most advisors doing this work are ex-investment bankers with shallow product knowledge, which is exactly the gap he's positioning against.
+This was a personal catch-up between Gareth Jones, principal of WorkTech, and Joe Sanchez, a former Thomas International colleague, rather than a structured research interview. WorkTech is a work-tech advisory practice (HR tech, ERP, expenses, B2B SaaS) with two service lines: an investor/corp-dev side (market intelligence, acquisition shortlisting, due diligence, post-deal integration) and a scale-up side (capital deployment strategy, AI readiness, exit prep). In describing WorkTech to Joe, Gareth framed its differentiation as a "product lens on top of technical assessment," positioned against advisors who are "ex-investment bankers with shallow product knowledge" — most deals, in his view, lose value through weak due diligence (which rarely goes beyond the tech stack) and weak post-integration execution.
 
-Joe, for his part, is nine months into an operating role at a company mid-acquisition: a ~£14m ARR, 20-year-old legacy expense management product buying an 8-year-old Australian company that rebuilt its platform (V3) in the last 18 months. His newly-hired CTO rates the target highly on product but flagged that it has no engineering processes and will be hard to scale — a live, current example of exactly the kind of diligence gap this research is probing. The rest of the call was Thomas International history and gossip (debt burden from Palamon, the Sabi-to-Luke CEO transition, Luke's stalled "2-3 year turnaround playbook," another round of 20% headcount cuts), which is less directly useful but reinforces the pattern already seen across [[fergus-brownlee]], [[alistair-cox]], [[sabby-gill]], [[guy-ballantine]], and [[amir-qureshi]] of Thomas as a recurring, cautionary reference point for this whole research track.
+Joe is nine months into his role as CEO of Webexpenses, mid-acquisition: a ~£14m ARR, 20-year-old legacy expense management product buying an 8-year-old Australian company that rebuilt its platform (V3) in the last 18 months. His newly-hired CTO rates the target highly on product but flagged that it has no engineering processes and will be hard to scale. The rest of the call was Thomas International history and catch-up (debt burden from Palamon, the Sabi-to-Luke CEO transition, Luke's stalled "2-3 year turnaround playbook," another round of 20% headcount cuts), consistent with the picture of Thomas already built up across [[fergus-brownlee]], [[alistair-cox]], [[sabby-gill]], [[guy-ballantine]], and [[amir-qureshi]].
 
 ## Who They Are / Relevant Context
 
-- Gareth Jones runs WorkTech, an independent advisory practice in work tech, built up over roughly the last year. He and Joe overlapped briefly at Thomas International around late 2021, and Gareth previously ran the product team there through two acquisition processes (see [[matthew-hewlett]]).
-- Gareth's practice has two service lines: an investor/corp-dev side (market intelligence, acquisition shortlisting, due diligence, post-deal integration) and a scale-up side (capital deployment strategy, AI readiness, exit prep).
-- Key collaborator: George Laroque, described as a top US work-tech analyst with deep market-intelligence coverage; the two have known each other 10-15 years and previously ran a startup accelerator programme together.
-- Joe is nine months into an operating role at a company running an acquisition of an Australian expense-management software business.
-- Both know the Thomas cast of characters well: Sabi (CEO who left abruptly for Dex), Luke (successor), Alistair (incoming chair), Fergus (outgoing chairman), Tim (CFO), and Magda — giving this call an unusually candid, insider view of how that business actually behaved through multiple leadership transitions.
+- Gareth Jones is the principal of WorkTech, a work-tech advisory practice built up over roughly the last year. Gareth and Joe overlapped briefly at Thomas International around late 2021, and Gareth previously ran the product team there through two acquisition processes (see [[matthew-hewlett]]).
+- WorkTech has two service lines: an investor/corp-dev side (market intelligence, acquisition shortlisting, due diligence, post-deal integration) and a scale-up side (capital deployment strategy, AI readiness, exit prep).
+- Key collaborator: George Laroque, described as a top US work-tech analyst with deep market-intelligence coverage; Gareth and George have known each other 10-15 years and previously ran a startup accelerator programme together.
+- Joe is nine months into his role as CEO of Webexpenses, running an acquisition of an Australian expense-management software business.
+- Both Gareth and Joe know the Thomas cast of characters well: Sabi (CEO who left abruptly for Dex), Luke (successor), Alistair (incoming chair), Fergus (outgoing chairman), Tim (CFO), and Magda — giving this call a candid, insider view of how that business behaved through multiple leadership transitions.
 
 ## Key Commercial Insights
 
-### 1. Gareth's own thesis mirrors the research findings independently
+### 1. Gareth's diagnosis of the M&A due diligence gap
 
-Without prompting from this research track, Gareth arrived at the same core diagnosis: most M&A deals in work tech fail for two reasons — due diligence quality that doesn't go beyond the tech stack, and weak post-integration execution. He explicitly framed his differentiation as a "product lens on top of technical assessment," contrasting himself with advisors who are "most... ex-investment bankers with shallow product knowledge." This is an independent confirmation of the gap thesis from someone who has built a paying practice around it, not just a spectator's opinion.
+Gareth's summary of the problem he's addressing with WorkTech: most M&A deals in work tech lose value for two reasons — due diligence quality that doesn't go beyond the tech stack, and weak post-integration execution. Providers doing this work today are, in his view, mostly ex-investment bankers with shallow product knowledge; his differentiation is a "product lens on top of technical assessment."
 
-### 2. A live, current example of the "great platform, no process" diligence gap
+### 2. A live example of the "strong product, no process" gap
 
-Joe's own acquisition — buying an 8-year-old Australian company with a strong, recently-rebuilt product (rated highly by his new CTO, Chris Fleck, after reviewing 15 years of comparable deals) — surfaced the exact failure mode this research keeps hearing about: the target has no engineering processes and "will be hard to scale." The founder's own view, after visiting the UK, was that the buyer's due diligence team "didn't ask the right questions." This is a real, in-flight deal (Bain-run DD, ~£147k, scoped to two products; IC approval in ~10 days) rather than a retrospective anecdote.
+Joe's acquisition at Webexpenses — buying an 8-year-old Australian company with a strong, recently-rebuilt product (rated highly by his new CTO, Chris Fleck, after reviewing 15 years of comparable deals) — has surfaced exactly this pattern: the target has no engineering processes and "will be hard to scale." The founder's own view, after visiting the UK, was that the buyer's due diligence team "didn't ask the right questions." This is a real, in-flight deal (Bain-run DD, ~£147k, scoped to two products; IC approval in ~10 days), not a retrospective anecdote.
 
-### 3. Even "gold standard" tech DD spend doesn't guarantee product delivery
+### 3. Even heavy tech DD spend doesn't guarantee product delivery
 
-Consistent with Matthew Hewlett's account (see [[matthew-hewlett]]), both Joe and Gareth returned to Thomas as the cautionary example: heavy spend on infrastructure and tooling (Databricks, ThoughtSpot, a rebuilt platform) coexisted with years of struggling to ship product, because the constraint was decision-making and prioritisation, not technology. This is now the third independent account (Gareth via Matthew Hewlett, and now Joe/Gareth directly) of the same specific company failing in the same specific way.
+Both Joe and Gareth pointed to Thomas as the cautionary example: heavy spend on infrastructure and tooling (Databricks, ThoughtSpot, a rebuilt platform) coexisted with years of struggling to ship product, because the constraint was decision-making and prioritisation, not technology. This matches Matthew Hewlett's account of the same company (see [[matthew-hewlett]]).
 
-### 4. Full-scope DD is scoped down when priced high — a real pricing data point
+### 4. Full-scope DD gets scoped down when priced high
 
-Joe's own deal used Bain for DD but "scaled back" scope because full pricing was too high — dropping from a broader engagement to just two products at ~£147k. This is a concrete, current data point on DD pricing sensitivity and scope trade-offs at this deal size, useful for benchmarking or positioning a leaner, more targeted offer.
+Joe's deal used Bain for DD but scaled back scope because full pricing was too high — dropping from a broader engagement to just two products at ~£147k, a concrete data point on DD pricing sensitivity at this deal size.
 
 ## How This Market Buys
 
-- Gareth's own go-to-market for WorkTech leans on a named market-intelligence specialist (George Laroque) for credibility and reach, rather than a generic self-marketing approach.
+- Gareth's go-to-market for WorkTech leans on a named market-intelligence specialist (George Laroque) for credibility and reach, rather than a generic self-marketing approach.
 - Full-scope tech/product DD (Bain, in this case) gets cost-managed by narrowing scope (here, to two of four product modules) when the full quote is too high — pricing sensitivity is real even at the IC-approval stage of a live deal.
-- Founders of the acquisition target visiting the acquirer in person, and coming away unimpressed that the DD team "didn't ask the right questions," reinforces Matthew Hewlett's point that founders/targets can tell when diligence is shallow, and it damages trust in the process.
-
-## Where Our Offer Fits
-
-- Gareth is a potential referral partner or informal competitor/collaborator rather than a target customer — he has already built a practice addressing a closely adjacent gap (product lens on M&A due diligence in work tech), so worth understanding his positioning in detail before treating this as pure competition.
-- Joe's own live deal is a concrete, current example of the target profile this research has been describing: strong product, weak engineering process, DD that stopped short of surfacing that risk properly.
-- The Bain engagement (scoped down from full to two products on cost grounds) hints at room for a leaner, more targeted product/engineering-process diligence offer priced below full-service firms like Bain.
+- Founders of the acquisition target visiting the acquirer in person, and coming away unimpressed that the DD team "didn't ask the right questions," is consistent with Matthew Hewlett's point that founders/targets can tell when diligence is shallow, and it damages trust in the process.
 
 ## Diligence / Value Creation Priorities
 
-- Engineering process maturity (not just product quality) is the specific risk flagged in Joe's live deal — a target can have an excellent product and still be very hard to scale if it has no engineering process.
-- Founder behaviour during due diligence (what they choose to reveal, how they read the buyer's team) is itself informative and was explicitly noted by Joe as a signal the DD team missed.
-- Two years is the estimated post-deal migration timeline in Joe's deal — a reminder that integration risk in these deals is measured in years, not months.
-
-## Positioning And Messaging Implications
-
-- Gareth's own pitch — a product lens layered on top of standard technical assessment, aimed at both corp-dev/investor buyers and scale-ups — is very close to this research's own positioning; worth a direct comparison of his materials once he sends them over.
-- The "engineering process, not just product quality" framing from Joe's live deal is a sharper, more specific angle than a generic product-health pitch, and matches language acquirers (like Joe's own company) are already using internally.
-- Thomas continues to function as a strong, real-world cautionary tale ("great stack, couldn't ship product") that resonates with people who were actually there — useful as an anecdote in conversations with people who know the company or the broader HR-tech/work-tech world.
-
-## GTM / Relationship Strategy
-
-- Gareth is going to send Joe a concise, forwardable summary of his WorkTech proposition, which Joe can pass to Mark at Tenzin — worth seeing what materials Gareth produces, both for competitive awareness and as a possible reference for our own one-pager.
-- Gareth is reintroducing Joe to a PE contact once materials are ready — worth tracking whether that introduction surfaces further names or opportunities relevant to this research.
-- George Laroque (Gareth's market-intelligence collaborator in the US) is a potentially valuable name to be aware of for future work-tech market intelligence, even if not an immediate outreach target.
-- Chris Fleck (Joe's newly hired CTO, 15 years of comparable-deal experience) could be a useful future conversation on the technical/engineering-process side of diligence specifically.
+- Engineering process maturity (not just product quality) is the specific risk flagged in Joe's deal — a target can have an excellent product and still be hard to scale if it has no engineering process.
+- Founder behaviour during due diligence (what they choose to reveal, how they read the buyer's team) was noted by Joe as a signal the DD team missed.
+- Two years is the estimated post-deal migration timeline in Joe's deal — integration risk here is measured in years, not months.
 
 ## Commercial Model Considerations
 
-- The Bain engagement price point (~£147k for two of four product modules, scaled back from a broader scope) is a useful real-world anchor for how much acquirers at this scale are willing to pay for DD, and how quickly that spend gets trimmed when it's perceived as too high.
-- Gareth's split into two service lines (investor/corp-dev vs. scale-up) is a workable segmentation model worth considering for how we frame our own offer to different buyer types.
-
-## Risks / Challenges
-
-- Gareth's WorkTech practice is close enough to our own positioning (product lens on M&A diligence, work tech focus) that it's worth clarifying quickly whether this is a competitive overlap, a complementary niche, or a potential collaboration before going further down the introduction path.
-- Most of this call's content (Thomas history, personal catch-up) is not directly monetisable research, so the useful signal here is narrower than a dedicated interview — treat it as a supporting data point rather than a primary source.
-- Joe's own deal is still live and unresolved (IC approval pending, terms being ironed out), so the "no engineering process" risk flag is a real-time observation, not a settled case study — worth following up once the deal closes to see how it actually plays out.
+- The Bain engagement price point (~£147k for two of four product modules, scaled back from a broader scope) is a real-world data point on what acquirers at this scale pay for DD, and how quickly that spend gets trimmed when it's perceived as too high.
+- WorkTech's two service lines (investor/corp-dev vs. scale-up) came through as a simple, easily explained split in an unscripted, informal setting.
 
 ## Suggested People To Speak To
 
-- **George Laroque** — Gareth's long-time collaborator, described as a top US work-tech market-intelligence analyst; potentially useful for market intelligence even outside a direct introduction.
-- **Chris Fleck** — Joe's newly hired CTO, with 15 years of experience assessing comparable deals; a possible future conversation on the engineering/scalability side of product diligence.
-- **Mark (at Tenzin)** — the PE contact Gareth's materials are being forwarded to; worth knowing what response this generates.
+- **George Laroque** — Gareth's long-time collaborator, described as a top US work-tech market-intelligence analyst.
+- **Chris Fleck** — Joe's newly hired CTO at Webexpenses, with 15 years of experience assessing comparable deals.
 
-## Takeaways For Us
+## Takeaways
 
-- Gareth Jones has independently built a paying advisory practice (WorkTech) around almost exactly the thesis this research is testing (product lens on top of standard tech DD, work-tech focus, failure modes rooted in diligence quality and post-integration execution) — get a look at his actual materials and positioning once they're ready.
-- Joe's own live acquisition is a real-time, concrete example of the "strong product, no engineering process, DD missed it" pattern, worth revisiting once the deal closes to see how the risk actually materialises.
-- Thomas International keeps recurring as the cautionary example across independent conversations (now via [[matthew-hewlett]], and directly here) — "great stack, couldn't ship product, buried in debt" is a resonant, real story worth having ready as an anecdote.
-- The Bain DD price point (~£147k, scoped down from a broader engagement) is a useful, current benchmark for what buyers at this scale are willing to pay and how sensitive they are to overall cost.
+- Gareth's informal framing of WorkTech ("product lens on top of technical assessment," diligence quality and post-integration execution as the two things that undermine deal value) is a clear, natural articulation of the practice's positioning.
+- Joe's live acquisition at Webexpenses is a current, concrete example of the "strong product, no engineering process, DD missed it" pattern.
+- Thomas International keeps recurring as a cautionary example across separate conversations (now via [[matthew-hewlett]], and directly here) — heavy tech spend without the ability to ship product, and a business under continuous financial pressure.
+- The Bain DD price point (~£147k, scoped down from a broader engagement) is a useful, current benchmark for DD pricing and scope at this deal size.
 
 ## Full Transcript
 
