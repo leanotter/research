@@ -121,6 +121,9 @@ const INTERVIEW_METADATA: Partial<
     jobTitle: "Former Chief Executive │ NED",
     company: "Hays plc",
   },
+  "private-equity/interviews/joe-sanchez": {
+    company: "Webexpenses",
+  },
 };
 
 function getFlowMeta(slug: string) {
