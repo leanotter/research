@@ -125,6 +125,10 @@ const INTERVIEW_METADATA: Partial<
     jobTitle: "CEO",
     company: "Webexpenses",
   },
+  "private-equity/interviews/arif-jafferji": {
+    jobTitle: "Partner and Founder",
+    company: "Diligency",
+  },
 };
 
 function getFlowMeta(slug: string) {
