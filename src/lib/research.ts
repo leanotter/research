@@ -4,7 +4,7 @@ export const FLOWS = [
   {
     slug: "market-customer-research",
     title: "Market and Customer Research",
-    description: "",
+    description: "Buy-side, sell-side, diligence, partners and PE-adjacent research interviews.",
   },
 ] as const;
 
