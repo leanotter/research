@@ -5,6 +5,8 @@
 - **Date:** Aug 28, 2026
 - **Participants:** Joe Sanchez, Gareth Jones
 - **Meeting title:** Joe <> Gareth Catch Up
+- **Job title:** CEO
+- **Company:** Webexpenses
 
 ## Snapshot
 

@@ -5,6 +5,8 @@
 - **Date:** Aug 7, 2026
 - **Participants:** Brom Sulaiman, Dean Ziadar, Mike
 - **Meeting title:** Dean, Brom, Mike intro
+- **Job title:** Partner
+- **Company:** LCV Partners
 
 ## Snapshot
 

@@ -5,6 +5,8 @@
 - **Date:** Aug 18, 2026
 - **Participants:** Gareth Jones, Alistair Cox
 - **Meeting title:** Alistair / G Lunch
+- **Job title:** Former Chief Executive │ NED
+- **Company:** Hays plc
 
 ## Snapshot
 

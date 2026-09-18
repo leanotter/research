@@ -1,0 +1,364 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { splitParticipants, toResearchDoc } from "../../lib/research";
+
+const entries = await getCollection("research");
+const docs = entries.map(toResearchDoc).filter(Boolean);
+const doc = docs.find(
+  (item) =>
+    item.type === Astro.params.type &&
+    item.slug === Astro.params.slug,
+);
+
+if (!doc) {
+  return Astro.redirect("/");
+}
+
+const { Content } = await render(doc.entry);
+---
+
+<BaseLayout title={doc.title} description={doc.description}>
+  <article class="doc-page">
+    <a class="back-link" href="/" aria-label={`Back to ${doc.flowTitle}`}>
+      <span aria-hidden="true">←</span>
+      <span>Back</span>
+    </a>
+
+    <header class="panel doc-header">
+      <p class="eyebrow">
+        {doc.flowTitle} / {doc.typeTitle}
+      </p>
+      <h1>{doc.title}</h1>
+      {(doc.jobTitle || doc.company) && (
+        <p class="role-line">
+          {[doc.jobTitle, doc.company].filter(Boolean).join(", ")}
+        </p>
+      )}
+      <div class="header-meta">
+        {doc.date && (
+          <p class="card-date">
+            <strong>{doc.date}</strong>
+          </p>
+        )}
+        {doc.participants && (
+          <div class="label-row" aria-label="Participants in the call">
+            {splitParticipants(doc.participants).map((participant) => (
+              <span class="meta-label">{participant}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+
+    <div
+      class="panel doc-content"
+      data-doc-title={doc.title}
+      data-doc-job-title={doc.jobTitle ?? ""}
+      data-doc-company={doc.company ?? ""}
+      data-doc-date={doc.date ?? ""}
+    >
+      {doc.hasTranscript && (
+        <div class="content-toolbar">
+          <div class="view-toggle" data-view-toggle>
+            <button type="button" data-doc-tab="notes" aria-selected="true">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="13"
+                height="13"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                <path d="M14 3v6h6"></path>
+                <path d="M8 13h8"></path>
+                <path d="M8 17h5"></path>
+              </svg>
+              <span>Notes</span>
+            </button>
+            <button type="button" data-doc-tab="transcript" aria-selected="false">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="13"
+                height="13"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <path d="M8 9h8"></path>
+                <path d="M8 13h5"></path>
+              </svg>
+              <span>Transcript</span>
+            </button>
+          </div>
+
+          <div class="transcript-toolbar" data-transcript-toolbar hidden>
+            <button class="copy-button" type="button" data-copy-transcript>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="13"
+                height="13"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span data-copy-label>Copy transcript</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div class="doc-view" data-doc-view="notes">
+        <div class="doc-source" data-doc-source>
+          <Content />
+        </div>
+      </div>
+      {doc.hasTranscript && <div class="doc-view" data-doc-view="transcript" hidden></div>}
+    </div>
+  </article>
+</BaseLayout>
+
+{
+  doc.hasTranscript && (
+    <script is:inline>
+      (() => {
+        const notesView = document.querySelector('[data-doc-view="notes"]');
+        const transcriptView = document.querySelector('[data-doc-view="transcript"]');
+        const source = document.querySelector("[data-doc-source]");
+        const toggle = document.querySelector("[data-view-toggle]");
+        const copyButton = document.querySelector("[data-copy-transcript]");
+        const copyLabel = document.querySelector("[data-copy-label]");
+        const transcriptToolbar = document.querySelector("[data-transcript-toolbar]");
+        const docContent = document.querySelector(".doc-content");
+        if (!notesView || !transcriptView || !source || !toggle || !docContent) {
+          return;
+        }
+
+        const children = Array.from(source.childNodes);
+        const transcriptHeading = children.find(
+          (node) =>
+            node.nodeType === Node.ELEMENT_NODE &&
+            node.nodeName === "H2" &&
+            node.textContent?.trim() === "Full Transcript",
+        );
+
+        const removeMeetingDetailsFromNotes = () => {
+          const firstHeading = notesView.querySelector("h1");
+          if (firstHeading) {
+            firstHeading.remove();
+          }
+
+          const noteChildren = Array.from(notesView.childNodes);
+          const meetingDetailsHeading = noteChildren.find(
+            (node) =>
+              node.nodeType === Node.ELEMENT_NODE &&
+              node.nodeName === "H2" &&
+              node.textContent?.trim() === "Meeting Details",
+          );
+
+          if (!meetingDetailsHeading) {
+            return;
+          }
+
+          let currentNode = meetingDetailsHeading;
+          while (currentNode) {
+            const nextNode = currentNode.nextSibling;
+            const shouldStop =
+              currentNode !== meetingDetailsHeading &&
+              currentNode.nodeType === Node.ELEMENT_NODE &&
+              currentNode.nodeName === "H2";
+
+            if (shouldStop) {
+              break;
+            }
+
+            currentNode.remove();
+            currentNode = nextNode;
+          }
+        };
+
+        const removeMeetingDetailsFromTranscript = () => {
+          const transcriptChildren = Array.from(transcriptView.childNodes);
+
+          for (const node of transcriptChildren) {
+            if (node.nodeType === Node.ELEMENT_NODE && node.nodeName === "H2") {
+              continue;
+            }
+
+            const text = node.textContent?.trim() ?? "";
+            if (
+              text.startsWith("Meeting Title:") ||
+              text.startsWith("Date:") ||
+              text.startsWith("Meeting participants:") ||
+              text === "Transcript:"
+            ) {
+              node.remove();
+            }
+          }
+        };
+
+        const formatTranscriptLine = (element, content) => {
+          element.classList.add("transcript-line");
+          element.textContent = "";
+
+          const speakerMatch = content.match(/^(Me|Them):(.*)$/s);
+          if (!speakerMatch) {
+            element.textContent = content;
+            return;
+          }
+
+          const [, speaker, remainder] = speakerMatch;
+          const label = document.createElement("strong");
+          label.className = "transcript-speaker";
+          label.textContent = `${speaker}:`;
+          element.appendChild(label);
+
+          if (remainder) {
+            element.appendChild(document.createTextNode(remainder));
+          }
+        };
+
+        const normalizeTranscriptFormatting = () => {
+          const transcriptBlocks = Array.from(
+            transcriptView.querySelectorAll("p, li"),
+          );
+
+          for (const block of transcriptBlocks) {
+            if (block.querySelector("img, pre, code")) {
+              continue;
+            }
+
+            const content = block.textContent?.trim() ?? "";
+            if (!content) {
+              continue;
+            }
+
+            const matches = Array.from(content.matchAll(/(?:^|\s)(Me|Them):/g));
+            if (matches.length <= 1) {
+              formatTranscriptLine(block, content);
+              continue;
+            }
+
+            const parts = content
+              .split(/(?=(?:Me|Them):)/g)
+              .map((part) => part.trim())
+              .filter(Boolean);
+
+            if (parts.length <= 1) {
+              block.classList.add("transcript-line");
+              continue;
+            }
+
+            const fragment = document.createDocumentFragment();
+            for (const part of parts) {
+              const paragraph = document.createElement("p");
+              formatTranscriptLine(paragraph, part);
+              fragment.appendChild(paragraph);
+            }
+
+            block.replaceWith(fragment);
+          }
+        };
+
+        if (transcriptHeading) {
+          const transcriptFragment = document.createDocumentFragment();
+          let moveToTranscript = false;
+
+          for (const node of children) {
+            if (node === transcriptHeading) {
+              moveToTranscript = true;
+            }
+
+            if (moveToTranscript) {
+              transcriptFragment.appendChild(node);
+            } else {
+              notesView.appendChild(node);
+            }
+          }
+
+          transcriptView.appendChild(transcriptFragment);
+        } else {
+          while (source.firstChild) {
+            notesView.appendChild(source.firstChild);
+          }
+        }
+
+        source.remove();
+        removeMeetingDetailsFromNotes();
+        removeMeetingDetailsFromTranscript();
+        normalizeTranscriptFormatting();
+
+        const buttons = Array.from(toggle.querySelectorAll("[data-doc-tab]"));
+        const setActiveView = (view) => {
+          notesView.hidden = view !== "notes";
+          transcriptView.hidden = view !== "transcript";
+          if (transcriptToolbar) {
+            transcriptToolbar.hidden = view !== "transcript";
+          }
+
+          for (const button of buttons) {
+            button.setAttribute(
+              "aria-selected",
+              button.getAttribute("data-doc-tab") === view ? "true" : "false",
+            );
+          }
+        };
+
+        for (const button of buttons) {
+          button.addEventListener("click", () => {
+            const view = button.getAttribute("data-doc-tab");
+            if (view) {
+              setActiveView(view);
+            }
+          });
+        }
+
+        if (copyButton && copyLabel) {
+          copyButton.addEventListener("click", async () => {
+            const title = docContent.getAttribute("data-doc-title")?.trim() ?? "";
+            const jobTitle = docContent.getAttribute("data-doc-job-title")?.trim() ?? "";
+            const company = docContent.getAttribute("data-doc-company")?.trim() ?? "";
+            const date = docContent.getAttribute("data-doc-date")?.trim() ?? "";
+            const transcriptText = transcriptView.innerText.replace(/^Copy transcript\s*/i, "").trim();
+            if (!transcriptText) {
+              return;
+            }
+
+            const roleLine = [jobTitle, company].filter(Boolean).join(", ");
+            const header = [title, roleLine, date].filter(Boolean).join("\n");
+            const copyText = [header, transcriptText].filter(Boolean).join("\n\n");
+
+            try {
+              await navigator.clipboard.writeText(copyText);
+              copyLabel.textContent = "Copied";
+              window.setTimeout(() => {
+                copyLabel.textContent = "Copy transcript";
+              }, 1500);
+            } catch {
+              copyLabel.textContent = "Copy failed";
+              window.setTimeout(() => {
+                copyLabel.textContent = "Copy transcript";
+              }, 1500);
+            }
+          });
+        }
+
+        setActiveView("notes");
+      })();
+    </script>
+  )
+}

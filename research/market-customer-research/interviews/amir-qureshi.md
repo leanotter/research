@@ -5,6 +5,7 @@
 - **Date:** Jun 30, 2026
 - **Participants:** Brom Sulaiman, Amir Qureshi
 - **Meeting title:** 30 min with Brom (Amir Qureshi)
+- **Job title:** Independent PE and M&A adviser
 
 ## Snapshot
 

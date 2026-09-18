@@ -1,12 +1,12 @@
 # Research Repository Guide
 
-This repository is organised as a research repository, currently focused on the Private Equity flow.
+This repository is organised as a research repository, currently focused on the Market and Customer Research flow.
 
 ## Top-Level Structure
 
 All work should live under `research/` and then be grouped by flow first:
 
-- `research/private-equity/`
+- `research/market-customer-research/`
 
 Within each flow, organise content by type:
 
@@ -18,7 +18,7 @@ Example structure:
 
 ```text
 research/
-  private-equity/
+  market-customer-research/
     interviews/
     notes/
     synthesis/
@@ -59,15 +59,15 @@ Different flows may require different summary structures. Use the structure defi
 - Avoid overly casual language in the summary, even if the transcript is informal.
 - Preserve the transcript as-is as much as possible when included in the `Full Transcript` section.
 
-## Private Equity Interview Structure
+## Market and Customer Research Interview Structure
 
-For Private Equity interviews, the reference example is:
+For Market and Customer Research interviews, the reference example is:
 
-- `research/private-equity/interviews/amir-qureshi.md`
+- `research/market-customer-research/interviews/amir-qureshi.md`
 
 These calls are typically most useful when they surface buyer behaviour, diligence priorities, positioning implications, and routes to market.
 
-Every Private Equity interview file should follow this structure in this order:
+Every Market and Customer Research interview file should follow this structure in this order:
 
 ```md
 # First Last
@@ -77,6 +77,8 @@ Every Private Equity interview file should follow this structure in this order:
 - **Date:** Mon DD
 - **Participants:** Name, Name
 - **Meeting title:** Exact meeting title
+- **Job title:** Interviewee's job title
+- **Company:** Interviewee's company
 
 ## Snapshot
 
@@ -181,6 +183,7 @@ Raw transcript pasted here.
 
 - Keep this short and factual.
 - Use bullets exactly as shown in the example.
+- Always include **Job title** and **Company** for the interviewee — the site reads these two fields directly from this section to populate the interview card, so a missing field means the card silently displays without a role line. If either is genuinely unknown, write "Unknown" rather than omitting the bullet.
 
 ### `## Snapshot`
 

@@ -5,6 +5,8 @@
 - **Date:** Aug 11, 2026
 - **Participants:** Gareth Jones, Fergus Brownlee
 - **Meeting title:** Fergus
+- **Job title:** Chairman
+- **Company:** Thomas International
 
 ## Snapshot
 

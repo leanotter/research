@@ -5,6 +5,7 @@
 - **Date:** Aug 5, 2026
 - **Participants:** Brom Sulaiman, Guy Ballantine, Mike
 - **Meeting title:** Product/UX Due Diligence Research Chat
+- **Job title:** CEO Adviser │ Non-exec
 
 ## Snapshot
 

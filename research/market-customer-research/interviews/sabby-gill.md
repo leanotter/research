@@ -5,6 +5,8 @@
 - **Date:** Jul 1, 2026
 - **Participants:** Brom Sulaiman, Sabby Gill
 - **Meeting title:** Sabby<> Brom - Catch Up
+- **Job title:** CEO
+- **Company:** Dext
 
 ## Snapshot
 

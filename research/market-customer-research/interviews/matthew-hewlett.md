@@ -5,6 +5,8 @@
 - **Date:** Aug 18, 2026
 - **Participants:** Brom Sulaiman, Matthew Hewlett, Gareth Jones
 - **Meeting title:** Brom Sulaiman & Gareth Jones <> Matt Hewlett (intro via Sabby)
+- **Job title:** Head of Strategy & Corporate Development
+- **Company:** IRIS Software Group
 
 ## Snapshot
 

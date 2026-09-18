@@ -2,9 +2,9 @@ import type { CollectionEntry } from "astro:content";
 
 export const FLOWS = [
   {
-    slug: "private-equity",
-    title: "Private Equity",
-    description: "Buy-side, sell-side, diligence, and PE-adjacent research interviews.",
+    slug: "market-customer-research",
+    title: "Market and Customer Research",
+    description: "",
   },
 ] as const;
 
@@ -86,51 +86,6 @@ function extractDetail(body: string, label: string) {
   return match?.[1]?.trim();
 }
 
-const INTERVIEW_METADATA: Partial<
-  Record<
-    string,
-    {
-      jobTitle?: string;
-      company?: string;
-    }
-  >
-> = {
-  "private-equity/interviews/amir-qureshi": {
-    jobTitle: "Independent PE and M&A adviser",
-  },
-  "private-equity/interviews/dean-ziadar": {
-    jobTitle: "Partner",
-    company: "LCV Partners",
-  },
-  "private-equity/interviews/guy-ballantine": {
-    jobTitle: "CEO Adviser │ Non-exec",
-  },
-  "private-equity/interviews/sabby-gill": {
-    jobTitle: "CEO",
-    company: "Dext",
-  },
-  "private-equity/interviews/matthew-hewlett": {
-    jobTitle: "Head of Strategy & Corporate Development",
-    company: "IRIS Software Group",
-  },
-  "private-equity/interviews/fergus-brownlee": {
-    jobTitle: "Chairman",
-    company: "Thomas International",
-  },
-  "private-equity/interviews/alistair-cox": {
-    jobTitle: "Former Chief Executive │ NED",
-    company: "Hays plc",
-  },
-  "private-equity/interviews/joe-sanchez": {
-    jobTitle: "CEO",
-    company: "Webexpenses",
-  },
-  "private-equity/interviews/arif-jafferji": {
-    jobTitle: "Partner and Founder",
-    company: "Diligency",
-  },
-};
-
 function getFlowMeta(slug: string) {
   return FLOWS.find((flow) => flow.slug === slug);
 }
@@ -155,13 +110,12 @@ export function toResearchDoc(entry: CollectionEntry<"research">): ResearchDoc |
   }
 
   const sections = splitDocumentSections(entry.body);
-  const metadata = INTERVIEW_METADATA[rawId];
 
   return {
     entry,
     id: rawId,
     slug,
-    url: `/${flow}/${type}/${slug}/`,
+    url: `/${type}/${slug}/`,
     flow: flowMeta.slug,
     flowTitle: flowMeta.title,
     type: typeMeta.slug,
@@ -169,8 +123,8 @@ export function toResearchDoc(entry: CollectionEntry<"research">): ResearchDoc |
     title: titleFromBody(entry.body),
     date: extractDetail(entry.body, "Date"),
     participants: extractDetail(entry.body, "Participants"),
-    jobTitle: metadata?.jobTitle,
-    company: metadata?.company,
+    jobTitle: extractDetail(entry.body, "Job [Tt]itle"),
+    company: extractDetail(entry.body, "Company"),
     description: descriptionFromBody(sections.notesBody),
     notesBody: sections.notesBody,
     transcriptBody: sections.transcriptBody,

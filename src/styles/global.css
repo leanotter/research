@@ -113,6 +113,7 @@ a {
 .grid {
   display: grid;
   gap: 16px;
+  align-items: start;
 }
 
 .grid.cols-3 {
@@ -259,6 +260,12 @@ a {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.interview-card .role-line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .doc-content {

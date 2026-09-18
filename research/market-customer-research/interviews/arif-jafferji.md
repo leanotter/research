@@ -5,6 +5,8 @@
 - **Date:** Sep 15, 2026
 - **Participants:** Brom Sulaiman, Arif Jafferji
 - **Meeting title:** Introduction
+- **Job title:** Partner and Founder
+- **Company:** Diligency
 
 ## Snapshot
 
