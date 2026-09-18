@@ -246,7 +246,7 @@ Raw transcript pasted here.
 
 - Always place the full transcript after the summary sections.
 - Keep the original wording intact where possible.
-- If the source transcript includes speaker labels like `Me:` and `Them:`, preserve them.
+- Preserve speaker labels exactly as they appear in the source transcript (e.g. `Brom Sulaiman:`, `Tilly Niven:`, or `Me:` / `Them:`). The site bolds each speaker turn by matching these labels against the names listed in `Participants`, so every name that speaks in the transcript must also appear in the `Participants` bullet, spelled identically. A `Me:` label is automatically displayed as `Brom Sulaiman:` (his full name), so leave `Me:` as-is in the raw transcript rather than manually replacing it.
 
 ## Style Rules
 

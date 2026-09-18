@@ -57,6 +57,7 @@ const { Content } = await render(doc.entry);
       data-doc-job-title={doc.jobTitle ?? ""}
       data-doc-company={doc.company ?? ""}
       data-doc-date={doc.date ?? ""}
+      data-doc-participants={doc.participants ?? ""}
     >
       {doc.hasTranscript && (
         <div class="content-toolbar">
@@ -156,6 +157,24 @@ const { Content } = await render(doc.entry);
             node.textContent?.trim() === "Full Transcript",
         );
 
+        const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const SELF_NAME = "Brom Sulaiman";
+
+        const participantsAttr = docContent.getAttribute("data-doc-participants") ?? "";
+        const speakerNames = Array.from(
+          new Set(
+            participantsAttr
+              .split(",")
+              .map((name) => name.trim())
+              .filter(Boolean)
+              .concat(["Me", "Them"]),
+          ),
+        ).sort((a, b) => b.length - a.length);
+        const speakerPattern = speakerNames.map(escapeRegExp).join("|");
+        const speakerLineExpression = new RegExp(`^(${speakerPattern}):(.*)$`, "s");
+        const speakerScanExpression = new RegExp(`(?:^|\\s)(${speakerPattern}):`, "g");
+        const speakerSplitExpression = new RegExp(`(?=(?:${speakerPattern}):)`, "g");
+
         const removeMeetingDetailsFromNotes = () => {
           const firstHeading = notesView.querySelector("h1");
           if (firstHeading) {
@@ -215,16 +234,17 @@ const { Content } = await render(doc.entry);
           element.classList.add("transcript-line");
           element.textContent = "";
 
-          const speakerMatch = content.match(/^(Me|Them):(.*)$/s);
+          const speakerMatch = content.match(speakerLineExpression);
           if (!speakerMatch) {
             element.textContent = content;
             return;
           }
 
           const [, speaker, remainder] = speakerMatch;
+          const displaySpeaker = speaker === "Me" ? SELF_NAME : speaker;
           const label = document.createElement("strong");
           label.className = "transcript-speaker";
-          label.textContent = `${speaker}:`;
+          label.textContent = `${displaySpeaker}:`;
           element.appendChild(label);
 
           if (remainder) {
@@ -247,14 +267,14 @@ const { Content } = await render(doc.entry);
               continue;
             }
 
-            const matches = Array.from(content.matchAll(/(?:^|\s)(Me|Them):/g));
+            const matches = Array.from(content.matchAll(speakerScanExpression));
             if (matches.length <= 1) {
               formatTranscriptLine(block, content);
               continue;
             }
 
             const parts = content
-              .split(/(?=(?:Me|Them):)/g)
+              .split(speakerSplitExpression)
               .map((part) => part.trim())
               .filter(Boolean);
 
